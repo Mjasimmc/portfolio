@@ -1,0 +1,95 @@
+.project-card-view {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+    margin-bottom: 20px;
+    /* Spacing between cards */
+    position: relative;
+    /* Required for absolute positioning of overlay */
+}
+
+.project-card-view:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow on hover */
+}
+
+.image-container {
+    position: relative;
+    /* Required for overlay */
+}
+
+.card-img {
+    height: 200px;
+    /* Fixed height for images */
+    object-fit: cover;
+    /* Cover to maintain aspect ratio */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for overlay */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    /* Show overlay on hover */
+}
+
+.overlay-title {
+    color: white;
+    /* White text for overlay */
+    font-size: 1.5rem;
+    /* Title font size */
+    text-align: center;
+    /* Center title */
+}
+
+.project-description {
+    font-size: 1rem;
+    /* Adjust description font size */
+    color: #666;
+    text-align: justify;
+    /* Darker color for description text */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    /* Center buttons */
+    margin-top: 10px;
+    /* Space between text and buttons */
+}
+
+.button-group .btn {
+    flex: 1;
+    /* Equal button size */
+    margin: 0 5px;
+    /* Margin between buttons */
+    border-radius: 5px;
+    /* Rounded button corners */
+    transition: background-color 0.3s ease;
+    /* Smooth button transition */
+}
+
+.button-group .btn:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+    color: white;
+    /* White text on hover */
+}
